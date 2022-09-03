@@ -10,10 +10,10 @@ export default function Home() {
         height="100px"
         alt="the fresh logo: a sliced lemon dripping with juice"
       />
-      <p>
+      {/* <p>
         Welcome to `fresh`. Try updating this message in the ./routes/index.tsx
         file, and refresh.
-      </p>
+      </p> */}
       <Counter start={3} />
     </div>
   );
