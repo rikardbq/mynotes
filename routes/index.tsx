@@ -1,20 +1,25 @@
 /** @jsx h */
-import { h } from "preact";
-import Counter from "../islands/Counter.tsx";
+import { Fragment, h } from "preact";
+import { Head } from "$fresh/runtime.ts";
+import Title from "../islands/Title.tsx";
+import Divider from "../components/Divider.tsx";
 
 export default function Home() {
   return (
-    <div>
-      <img
-        src="/logo.svg"
-        height="100px"
-        alt="the fresh logo: a sliced lemon dripping with juice"
-      />
-      {/* <p>
-        Welcome to `fresh`. Try updating this message in the ./routes/index.tsx
-        file, and refresh.
-      </p> */}
-      <Counter start={3} />
-    </div>
+    <Fragment>
+      <Head>
+        <link rel="stylesheet" href="/styles/Title.css" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <title>Trying Deno Fresh 🍋</title>
+        <meta
+          name="description"
+          content="Trying out Deno Fresh: first look at the new, fast web framework from the Deno team with Island hydration and zero JS by default."
+        />
+      </Head>
+      <div>
+        <Title value="hello" className="title-lg" />
+      </div>
+    </Fragment>
   );
 }
