@@ -1,7 +1,6 @@
 /** @jsx h */
 import { Fragment, h } from "preact";
 import { Head } from "$fresh/runtime.ts";
-import { IS_BROWSER } from "$fresh/runtime.ts";
 import Title from "../islands/Title.tsx";
 
 export default function Home() {
@@ -17,7 +16,9 @@ export default function Home() {
           content="Trying out Deno Fresh: first look at the new, fast web framework from the Deno team with Island hydration and zero JS by default."
         />
       </Head>
-      <div>{IS_BROWSER && <Title value="hello" className="title-lg" />}</div>
+      <div>
+        <Title value="hello" className="title-lg" />
+      </div>
     </Fragment>
   );
 }

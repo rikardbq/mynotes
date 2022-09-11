@@ -1,6 +1,7 @@
 /** @jsx h */
 import { h } from "preact";
 import { useState } from "preact/hooks";
+import { IS_BROWSER } from "$fresh/runtime.ts";
 import Divider from "../components/Divider.tsx";
 
 export default function Title({ className, value }: any) {
