@@ -17,7 +17,7 @@ export default function Home() {
           content="Trying out Deno Fresh: first look at the new, fast web framework from the Deno team with Island hydration and zero JS by default."
         />
       </Head>
-      <div>{IS_BROWSER ?? <Title value="hello" className="title-lg" />}</div>
+      <div>{IS_BROWSER && <Title value="hello" className="title-lg" />}</div>
     </Fragment>
   );
 }
