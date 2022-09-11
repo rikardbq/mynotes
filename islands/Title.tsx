@@ -1,7 +1,6 @@
 /** @jsx h */
 import { h } from "preact";
 import { useState } from "preact/hooks";
-import { IS_BROWSER } from "$fresh/runtime.ts";
 import Divider from "../components/Divider.tsx";
 
 export default function Title({ className, value }: any) {
@@ -12,7 +11,7 @@ export default function Title({ className, value }: any) {
       <input
         type="text"
         placeholder="Title"
-        value={IS_BROWSER ? titleValue : ""}
+        value={titleValue}
         onInput={(event: any) => {
           const { target: { value } } = event;
           setTitleValue(value);
